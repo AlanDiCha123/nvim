@@ -17,17 +17,21 @@ map('n', '<leader>nh', ':nohlsearch<CR>', {noremap = true})
 
 
 --inoremap
-
 map('i', 'jk', '<Esc>', {noremap = true})
 map('i', 'JK', '<Esc>', {noremap = true})
 map('i', ';;', '<Esc><Esc>la', {noremap = true})
 map('i', 'hh', '<Esc><Esc>i', {noremap = true})
 
 --visual & visual-line
-
-map('x', 'K', ':move <-2<CR>gv-gv', {noremap = true})
-map('x', 'J', ':move <+1<CR>gv-gv', {noremap = true})
-map('v', '>', '>gv', {noremap = true})
+map('x', 'J', ":m '>+1<CR>gv-gv", {noremap = true})
+map('x', 'K', ":m '<-2<CR>gv-gv", {noremap = true})
 map('v', '<', '<gv', {noremap = true})
+map('v', '>', '>gv', {noremap = true})
 map('v', '<Leader>;', '<Esc>', {noremap = true})
 
+
+-- packer
+
+map('n', '<Leader>pi', ':PackerInstall<CR>', {noremap = true})
+map('n', '<Leader>pu', ':PackerUpdate<CR>', {noremap = true})
+map('n', '<Leader>pc', ':PackerClean<CR>', {noremap = true})

@@ -5,7 +5,8 @@ local set = vim.opt
 
 --global options
 o.scrolloff = 2
-
+o.encoding="utf-8"
+o.wrap = true
 
 --window-local options
 
@@ -22,3 +23,5 @@ set.softtabstop = 3
 set.autoindent = true
 set.cursorline = true
 set.autowrite = true
+set.splitbelow = true
+set.splitright = true
