@@ -1,27 +1,45 @@
-local o = vim.o
-local wo = vim.wo
-local bo = vim.bo
-local set = vim.opt
+local options = {
 
---global options
-o.scrolloff = 2
-o.encoding="utf-8"
-o.wrap = true
+   backup = false,                          --create a backup file
+--   clipboard = "unnamedplus",               --allows neovim to acces the system clipboard
+--   cmdheight = 2,                           --more space in the neovim line for displaying messages
+--   completeopt = { "menuone", "noselect" }, --mostly just for cmp
+--   conceallevel = 1,                        --so that `` is visible in markdown files
+   fileencoding = "utf-8",                  --the encoding written to a file
+--   hidden = true,                           --required to keep multiple buffers
+   ignorecase = false,
+   mouse = "a",                             --allow the mouse to be used in neovim
+--   pumheight = 10,                          --pop up menu height
+   showmode = true,                         --insert, visual etc.
+   showtabline = 3,                         --always show tabs
+   smartcase = true,
+   smartindent = true,
+   splitbelow = true,
+   splitright = true,
+--   swapfile = false,
+   termguicolors = true,
+--   timeoutlen = 100,
+--   undofile = true,
+   updatetime = 300,
+--   writebackup = false,
+   expandtab = true,
+   shiftwidth = 3,
+   tabstop = 3,
+   softtabstop = 3,
+   cursorline = true,
+   number = true, 
+   relativenumber = true,
+   numberwidth = 3,
+--   signcolumn = "no",
+   wrap = false,
+   scrolloff = 8,
+--   sidescrolloff = 8,
+}
 
---window-local options
+vim.opt.shortmess:append "c"
 
-wo.number = true
-wo.relativenumber = true
+for k, v in pairs(options) do
+   vim.opt[k] = v
+end
 
-
-
---global options
-set.tabstop = 2
-set.shiftwidth = 3
-set.expandtab = true
-set.softtabstop = 3
-set.autoindent = true
-set.cursorline = true
-set.autowrite = true
-set.splitbelow = true
-set.splitright = true
+--vim.cmd "set whichwrap+=<,>,[,],h,1"

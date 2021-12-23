@@ -73,6 +73,7 @@ packer.reset()
 packer.startup(function()
 
 use 'neovim/nvim-lspconfig'
+use 'glepnir/lspsaga.nvim'
 use {
    'kyazdani42/nvim-tree.lua',
    requires = {
@@ -81,6 +82,8 @@ use {
    config = function() require'nvim-tree'.setup {} end
 
 }
+use 'nvim-treesitter/nvim-treesitter'
+use 'morhetz/gruvbox'
 
 
 end)
