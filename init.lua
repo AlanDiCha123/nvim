@@ -1,13 +1,8 @@
 require('settings.config')
 
---require('config-plug.beforeconfigs')
-
-require('keybindings/shortcuts')
-
+require('keybindings.shortcuts')
 
 require('plugins.packconf')
-
-
 
 require('config-plug.lsp')
 
