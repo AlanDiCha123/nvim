@@ -10,7 +10,7 @@ local options = {
    ignorecase = false,
    mouse = "a",                             --allow the mouse to be used in neovim
 --   pumheight = 10,                          --pop up menu height
-   showmode = true,                         --insert, visual etc.
+   showmode = false,                         --insert, visual etc.
    showtabline = 3,                         --always show tabs
    smartcase = true,
    smartindent = true,
@@ -37,6 +37,7 @@ local options = {
 }
 
 vim.opt.shortmess:append "c"
+vim.o.completeopt = "menuone,noselect"
 
 for k, v in pairs(options) do
    vim.opt[k] = v

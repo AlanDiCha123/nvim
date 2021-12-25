@@ -73,7 +73,6 @@ packer.reset()
 packer.startup(function()
 
 use 'neovim/nvim-lspconfig'
-use 'glepnir/lspsaga.nvim'
 use {
    'kyazdani42/nvim-tree.lua',
    requires = {
@@ -82,8 +81,17 @@ use {
    config = function() require'nvim-tree'.setup {} end
 
 }
+use {
+   'nvim-lualine/lualine.nvim',
+   requires = {'kyazdani42/nvim-web-devicons', opt = true}
+}
+use {
+   'akinsho/bufferline.nvim',
+   requires = 'kyazdani42/nvim-web-devicons'
+}
 use 'nvim-treesitter/nvim-treesitter'
-use 'morhetz/gruvbox'
+use 'folke/tokyonight.nvim'
+use 'windwp/nvim-autopairs'
 
 
 end)

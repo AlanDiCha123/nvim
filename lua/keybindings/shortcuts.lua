@@ -3,11 +3,13 @@ local map = vim.api.nvim_set_keymap
 
 g.mapleader = ' '
 
+--map('', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
 --save, quit and forced removed
 map('n', '<Leader>w', ':w<CR>', {noremap = true})
 map('n', '<Leader>wq', ':wq<CR>', {noremap = true})
 map('n', '<Leader>q', ':q!<CR>', {noremap = true})
 map('n', '<C-s>', ':w<CR>', {noremap = true})
+map('i', '<C-s>', ':w<CR>', {noremap = true})
 --quit and forced removed (buffers)
 map('n', '<C-q>', ':bdelete<CR>', {noremap = true})
 map('n', '<C-Q>', ':bdelete!<CR>', {noremap = true})
@@ -64,24 +66,16 @@ map('n', '<Leader>nf', ':NvimTreeFindFile<CR>', {noremap = true})
 
 --Lspconfig
 
---map('n', '<silent> gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
---map('n', '<silent> gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {noremap = true, silent = true})
---map('n', '<silent> gr', '<cmd>lua vim.lsp.buf.references()<CR>', {noremap = true, silent = true})
---map('n', '<silent> gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {noremap = true, silent = true})
---map('n', '<silent> K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true, silent = true})
---map('n', '<silent> <C-k> K', '<cmd>lua vim.lsp.buf.signatureHelp()<CR>', {noremap = true, silent = true})
---map('n', '<silent> <C-k> K', '<cmd>lua vim.lsp.buf.goto_prev()<CR>', {noremap = true, silent = true})
---map('n', '<silent> <C-k> K', '<cmd>lua vim.lsp.buf.goto_next()<CR>', {noremap = true, silent = true})
-
---Lsppsaga
+map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
+map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {noremap = true, silent = true})
+map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', {noremap = true, silent = true})
+map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {noremap = true, silent = true})
+map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true, silent = true})
+map('n', '<silent> <C-k> K', '<cmd>lua vim.lsp.buf.signatureHelp()<CR>', {noremap = true, silent = true})
+map('n', '<silent> <C-k> K', '<cmd>lua vim.lsp.buf.goto_prev()<CR>', {noremap = true, silent = true})
+map('n', '<silent> <C-k> K', '<cmd>lua vim.lsp.buf.goto_next()<CR>', {noremap = true, silent = true})
 
 
--- lsp provider to find the cursor word definition and reference
-map('n', '<silent>gh', ':Lspsaga lsp_finder<CR>', {noremap = true, silent = true})
--- code action
-map('n', '<leader>ca', ':Lspsaga code_action<CR>', {noremap = true, silent = true})
-map('v', '<leader>ca', ':<C-U>Lspsaga range_code_action<CR>', {noremap = true, silent = true})
--- show hover doc
-map('n', '<silent>K', '<Cmd>Lspsaga hover_doc<CR>', {noremap = true, silent = true})
+
 
 
