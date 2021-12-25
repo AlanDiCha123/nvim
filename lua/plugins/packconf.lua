@@ -97,6 +97,7 @@ use {
 use 'nvim-treesitter/nvim-treesitter'
 use 'folke/tokyonight.nvim'
 use 'windwp/nvim-autopairs'
+use 'onsails/lspkind-nvim'
 
 
 end)

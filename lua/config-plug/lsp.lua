@@ -1,4 +1,5 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
+
 capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
 
 local nvim_lsp = require('lspconfig')
@@ -24,6 +25,9 @@ end
 --luasnip setup
 local luasnip = require 'luasnip'
 
+--lspkind setup
+local lspkind = require('lspkind')
+
 --nvim-cmp setup
 local cmp = require 'cmp'
 cmp.setup {
@@ -47,20 +51,28 @@ cmp.setup {
          if cmp.visible() then
             cmp.select_next_item()
          elseif luasnip.expand_or_jumpable() then
-            luasnip.expand_or_jump()
+            --luasnip.expand_or_jump()
+            vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<Plug>luasnip-expand-or-jump', true, true, true), '')
          else
             fallback()
          end
       end,
       ['<S-Tab>'] = function(fallback)
          if cmp.visible() then
-            cmp.selsect_prev_item()
+            cmp.select_prev_item()
          elseif luasnip.jumpable(-1) then
-            luasnip.jump(-1)
+            --luasnip.jump(-1)
+            vim.fn.feedkeys(vim.api.nvim_replace_termcodes('<Plug>luasnip-jump-prev', true, true, true), '')
          else
             fallback()
          end
       end,
+   },
+   formatting = {
+      format = lspkind.cmp_format({
+         with_text = true,
+         maxwidth = 50,
+      })
    },
    sources = {
       { name = 'nvim_lsp'},
