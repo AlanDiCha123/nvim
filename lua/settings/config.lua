@@ -1,7 +1,7 @@
 local options = {
 
    backup = false,                          --create a backup file
---   clipboard = "unnamedplus",               --allows neovim to acces the system clipboard
+   clipboard = "unnamedplus",               --allows neovim to acces the system clipboard
 --   cmdheight = 2,                           --more space in the neovim line for displaying messages
 --   completeopt = { "menuone", "noselect" }, --mostly just for cmp
 --   conceallevel = 1,                        --so that `` is visible in markdown files
@@ -30,7 +30,7 @@ local options = {
    number = true, 
    relativenumber = true,
    numberwidth = 3,
---   signcolumn = "no",
+   -- signcolumn = "yes",
    wrap = false,
    scrolloff = 8,
 --   sidescrolloff = 8,
@@ -42,4 +42,3 @@ vim.o.completeopt = "menuone,noselect"
 for k, v in pairs(options) do
    vim.opt[k] = v
 end
-

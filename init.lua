@@ -10,3 +10,5 @@ require('config-plug.lsp')
 
 require('config-plug.another')
 
+require('config-plug.comment')
+
