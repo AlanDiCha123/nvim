@@ -74,6 +74,7 @@ map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true, silent = true
 map('n', '<silent> <C-k> K', '<cmd>lua vim.lsp.buf.signatureHelp()<CR>', {noremap = true, silent = true})
 map('n', '<silent> <C-k> K', '<cmd>lua vim.lsp.buf.goto_prev()<CR>', {noremap = true, silent = true})
 map('n', '<silent> <C-k> K', '<cmd>lua vim.lsp.buf.goto_next()<CR>', {noremap = true, silent = true})
+map('n', '<leader>fr', '<cmd>lua vim.lsp.buf.formatting()<CR>', {noremap = true, silent = true})
 
 
 
