@@ -6,6 +6,8 @@ require('plugins.packconf')
 
 require('config-plug.tree')
 
+require('config-plug.treesitter')
+
 require('config-plug.lsp')
 
 require('config-plug.another')
