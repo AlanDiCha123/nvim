@@ -52,6 +52,8 @@ use 'lukas-reineke/indent-blankline.nvim'
 
 use 'rafamadriz/friendly-snippets'
 
+use 'kevinhwang91/rnvimr'
+
 end)
 
 

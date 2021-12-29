@@ -64,6 +64,11 @@ map('n', '<Leader>nr', ':NvimTreeRefresh<CR>', {noremap = true})
 map('n', '<Leader>nf', ':NvimTreeFindFile<CR>', {noremap = true})
 
 
+-- Ranger with rnvimr
+
+map('n', '<Leader>r', ':RnvimrToggle<CR>', {noremap = true})
+
+
 --Lspconfig
 
 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})

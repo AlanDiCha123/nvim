@@ -15,7 +15,7 @@ local nvim_lsp = require('lspconfig')
 --   buf_set_keymap('n', '<F3>', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
 --end
    
-local servers = { 'pyright', 'tsserver', 'vuels', 'html', 'cssls'}
+local servers = { 'pyright', 'tsserver', 'vuels', 'html', 'cssls', 'clangd'}
 for _, lsp in ipairs(servers) do
    nvim_lsp[lsp].setup {
       capabilities = capabilities,
