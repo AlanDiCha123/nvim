@@ -9,6 +9,7 @@ packer.startup(function()
 
 use 'neovim/nvim-lspconfig'
 use 'hrsh7th/nvim-cmp'
+use 'hrsh7th/cmp-path'
 use 'hrsh7th/cmp-nvim-lsp'
 use 'saadparwaiz1/cmp_luasnip'
 use 'L3MON4D3/LuaSnip'
@@ -48,6 +49,8 @@ use {
   end
 }
 use 'lukas-reineke/indent-blankline.nvim'
+
+use 'rafamadriz/friendly-snippets'
 
 end)
 

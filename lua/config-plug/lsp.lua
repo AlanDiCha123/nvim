@@ -1,6 +1,6 @@
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 
-capabilities = require('cmp_nvim_lsp').update_capabilities(capabilities)
+local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local nvim_lsp = require('lspconfig')
 
@@ -23,7 +23,8 @@ for _, lsp in ipairs(servers) do
 end
 
 
-
+--load luasnip
+require('luasnip/loaders/from_vscode').lazy_load()
 
 --luasnip setup
 local luasnip = require 'luasnip'
@@ -36,7 +37,7 @@ local cmp = require 'cmp'
 cmp.setup {
    snippet = {
       expand = function(args)
-         require('luasnip').lsp_expand(args, body)
+         require('luasnip').lsp_expand(args.body)
       end,
    },
    mapping = {
@@ -80,6 +81,7 @@ cmp.setup {
    sources = {
       { name = 'nvim_lsp'},
       { name = 'luasnip'},
+      { name = 'path' },
    },
 }
 
