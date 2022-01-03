@@ -75,6 +75,8 @@ map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent 
 map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {noremap = true, silent = true})
 map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', {noremap = true, silent = true})
 map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {noremap = true, silent = true})
+map('n', '<leader>re', '<cmd>lua vim.lsp.buf.rename()<CR>', {noremap = true, silent = true})
+map('n', '<leader>di', '<cmd>lua vim.diagnostic.open_float()<CR>', {noremap = true, silent = true})
 map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true, silent = true})
 map('n', '<silent> <C-k> K', '<cmd>lua vim.lsp.buf.signatureHelp()<CR>', {noremap = true, silent = true})
 map('n', '<silent> <C-k> K', '<cmd>lua vim.lsp.buf.goto_prev()<CR>', {noremap = true, silent = true})
