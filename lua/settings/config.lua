@@ -18,6 +18,7 @@ local options = {
    splitright = true,
 --   swapfile = false,
    termguicolors = true,
+--   colorcolumn = 80,
 --   timeoutlen = 100,
 --   undofile = true,
    updatetime = 300,

@@ -9,6 +9,8 @@ vim.api.nvim_command('autocmd SourcePost * highlight Normal ctermbg=NONE guibg=N
 vim.api.nvim_command('autocmd SourcePost * highlight LineNr ctermbg=NONE guibg=NONE')
 vim.api.nvim_command('autocmd SourcePost * highlight SignColumn ctermbg=NONE guibg=NONE')
 vim.cmd('set background=dark')
+vim.cmd('set colorcolumn=110')
+vim.cmd('highlight ColorColumn  guibg=#3E4156') 
 
 require("bufferline").setup{}
 
