@@ -54,6 +54,8 @@ use 'rafamadriz/friendly-snippets'
 
 use 'kevinhwang91/rnvimr'
 
+use 'mfussenegger/nvim-jdtls'
+
 end)
 
 
