@@ -69,6 +69,11 @@ map('n', '<Leader>nf', ':NvimTreeFindFile<CR>', {noremap = true})
 map('n', '<Leader>r', ':RnvimrToggle<CR>', {noremap = true})
 
 
+-- Lazygit
+
+map('n', '<Leader>lg', ':LazyGit<CR>', {noremap = true})
+
+
 --Lspconfig
 
 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
