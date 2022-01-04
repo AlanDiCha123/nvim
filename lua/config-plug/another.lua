@@ -16,7 +16,7 @@ require("bufferline").setup{}
 
 require('nvim-autopairs').setup{}
 
-
+require("colorizer").setup()
 
 -- Telescope
 -- Find files using Telescope command-line sugar.
