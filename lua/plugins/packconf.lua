@@ -54,6 +54,8 @@ use 'rafamadriz/friendly-snippets'
 
 use 'norcalli/nvim-colorizer.lua'
 
+use 'tpope/vim-fugitive'
+
 use 'kevinhwang91/rnvimr'
 
 use 'mfussenegger/nvim-jdtls'
