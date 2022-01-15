@@ -3,7 +3,7 @@ local map = vim.api.nvim_set_keymap
 
 g.mapleader = ' '
 
---map('', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
+--noremap('', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
 --save, quit and forced removed
 map('n', '<Leader>w', ':w<CR>', {noremap = true})
 map('n', '<Leader>wq', ':wq<CR>', {noremap = true})
@@ -29,6 +29,7 @@ map('n', '<C-Up>', ':resize -2<CR>', {noremap = true})
 map('n', '<C-Down>', ':resize +2<CR>', {noremap = true})
 map('n', '<C-Left>', ':vertical resize -2<CR>', {noremap = true})
 map('n', '<C-Right>', ':vertical resize +2<CR>', {noremap = true})
+map('n', '<leader>ne', ':set shiftwidth=', {noremap = true})
 
 
 
