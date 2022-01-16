@@ -34,6 +34,9 @@ local options = {
    -- signcolumn = "yes",
    wrap = false,
    scrolloff = 8,
+   foldmethod=indent,
+   foldlevel=1,
+   foldclose=all,
 --   sidescrolloff = 8,
 }
 
