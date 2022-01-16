@@ -20,9 +20,14 @@ watch the results in the right.
 
 ## Installation
 
-Make sure you have created the following route. If you don't have, create yourself.
+Make sure you have created the following route. 
 ```sh
 cd ~/.config/nvim/
+```
+If you don't have, execute the following lines into you terminal.
+```
+cd ~/.config/
+mkdir nvim
 ```
 Once you have inside the directory, clone this repository
 ```sh
