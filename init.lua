@@ -14,5 +14,7 @@ require('config-plug.another')
 
 require('config-plug.snippets')
 
+require('config-plug.java')
+
 require('config-plug.comment')
 

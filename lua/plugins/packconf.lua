@@ -52,6 +52,20 @@ use 'lukas-reineke/indent-blankline.nvim'
 
 use 'rafamadriz/friendly-snippets'
 
+use 'norcalli/nvim-colorizer.lua'
+
+use 'tpope/vim-surround'
+
+use 'tpope/vim-fugitive'
+
+use 'kevinhwang91/rnvimr'
+
+use 'kdheepak/lazygit.nvim'
+
+use 'mg979/vim-visual-multi'
+
+use 'mfussenegger/nvim-jdtls'
+
 end)
 
 
