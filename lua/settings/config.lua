@@ -18,6 +18,7 @@ local options = {
    splitright = true,
 --   swapfile = false,
    termguicolors = true,
+--   colorcolumn = 80,
 --   timeoutlen = 100,
 --   undofile = true,
    updatetime = 300,
@@ -33,6 +34,9 @@ local options = {
    -- signcolumn = "yes",
    wrap = false,
    scrolloff = 8,
+   foldmethod=indent,
+   foldlevel=1,
+   foldclose=all,
 --   sidescrolloff = 8,
 }
 

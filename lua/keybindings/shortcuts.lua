@@ -3,7 +3,7 @@ local map = vim.api.nvim_set_keymap
 
 g.mapleader = ' '
 
---map('', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
+--noremap('', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true})
 --save, quit and forced removed
 map('n', '<Leader>w', ':w<CR>', {noremap = true})
 map('n', '<Leader>wq', ':wq<CR>', {noremap = true})
@@ -29,6 +29,7 @@ map('n', '<C-Up>', ':resize -2<CR>', {noremap = true})
 map('n', '<C-Down>', ':resize +2<CR>', {noremap = true})
 map('n', '<C-Left>', ':vertical resize -2<CR>', {noremap = true})
 map('n', '<C-Right>', ':vertical resize +2<CR>', {noremap = true})
+map('n', '<leader>ne', ':set shiftwidth=', {noremap = true})
 
 
 
@@ -64,17 +65,30 @@ map('n', '<Leader>nr', ':NvimTreeRefresh<CR>', {noremap = true})
 map('n', '<Leader>nf', ':NvimTreeFindFile<CR>', {noremap = true})
 
 
+-- Ranger with rnvimr
+
+map('n', '<Leader>r', ':RnvimrToggle<CR>', {noremap = true})
+
+
+-- Lazygit
+
+map('n', '<Leader>lg', ':LazyGit<CR>', {noremap = true})
+
+
 --Lspconfig
 
 map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', {noremap = true, silent = true})
 map('n', 'gD', '<cmd>lua vim.lsp.buf.declaration()<CR>', {noremap = true, silent = true})
 map('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', {noremap = true, silent = true})
 map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', {noremap = true, silent = true})
+map('n', '<leader>re', '<cmd>lua vim.lsp.buf.rename()<CR>', {noremap = true, silent = true})
+map('n', '<leader>di', '<cmd>lua vim.diagnostic.open_float()<CR>', {noremap = true, silent = true})
 map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', {noremap = true, silent = true})
 map('n', '<silent> <C-k> K', '<cmd>lua vim.lsp.buf.signatureHelp()<CR>', {noremap = true, silent = true})
 map('n', '<silent> <C-k> K', '<cmd>lua vim.lsp.buf.goto_prev()<CR>', {noremap = true, silent = true})
 map('n', '<silent> <C-k> K', '<cmd>lua vim.lsp.buf.goto_next()<CR>', {noremap = true, silent = true})
 map('n', '<leader>fr', '<cmd>lua vim.lsp.buf.formatting()<CR>', {noremap = true, silent = true})
+map('n', '<leader>co', '<cmd>lua vim.lsp.buf.code_action()<CR>', {noremap = true, silent = true})
 
 
 
