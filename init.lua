@@ -10,6 +10,8 @@ require('config-plug.treesitter')
 
 require('config-plug.lsp')
 
+require('config-plug.lualsp')
+
 require('config-plug.another')
 
 require('config-plug.snippets')
