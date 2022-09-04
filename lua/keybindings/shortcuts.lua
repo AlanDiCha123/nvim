@@ -90,6 +90,7 @@ map('n', '<silent> <C-k> K', '<cmd>lua vim.lsp.buf.goto_next()<CR>', {noremap = 
 map('n', '<leader>fr', '<cmd>lua vim.lsp.buf.formatting()<CR>', {noremap = true, silent = true})
 map('n', '<leader>co', '<cmd>lua vim.lsp.buf.code_action()<CR>', {noremap = true, silent = true})
 
+map('n', '<leader>lA', '<cmd>lua require(\'jdtls\').code_action()<CR>', {noremap = true, silent = true})
 
 --exit from terminal
 vim.cmd[[tnoremap <Esc> <C-\><C-n>]]
